@@ -1,5 +1,5 @@
 function news=getMainDirectionStress(stress,theta)
-%逆时针转动theta得到主应力
+%逆时针转动theta得到主方向应力
 T=getRotateMatrix(theta);
 ssvic=[stress.sx,stress.sy,stress.sxy].';
 nssvic=inv(T)*ssvic;
