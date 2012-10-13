@@ -1,10 +1,12 @@
-function strain=getStrainFromStress(stress,material,T)
+function strain=getStrainFromStress(stress,material,theta)
 %Structure stress 
 %Structure material
-%T默认为eye(3)
+%theta默认为0，使用弧度，顺时针转动
 
 if nargin<3
     T=eye(3);
+else
+    T=getRotateMatrix(theta);
 end
 
 S=getMaterialMatrixS(material);
