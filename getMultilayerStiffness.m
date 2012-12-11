@@ -7,7 +7,7 @@ end
 
 A=zeros(3);
 B=zeros(3);
-D=zerps(3);
+D=zeros(3);
 
 for i=1:length(materials)
     [Ak,Bk,Dk]=getBoardStiffness(material(i),theta(i),z(i),z1(i+1));
